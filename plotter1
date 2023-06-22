@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+
+def draw_graph(x_values, y_values):
+    """
+    This function takes two lists of numbers as arguments and plots them on a graph.
+    
+    Parameters:
+    x_values (list): A list of numbers to be plotted on the x-axis
+    y_values (list): A list of numbers to be plotted on the y-axis
+    
+    Returns:
+    None
+    """
+    try:
+        # Check if both arguments are lists
+        if not isinstance(x_values, list) or not isinstance(y_values, list):
+            raise TypeError("Both arguments must be lists")
+        
+        # Check if both lists have the same length
+        if len(x_values) != len(y_values):
+            raise ValueError("Both lists must have the same length")
+        
+        # Plot the graph
+        plt.plot(x_values, y_values)
+        plt.show()
+    except (TypeError, ValueError) as e:
+        # Log the error
+        print(f"Error: {e}")
+Check out other AI services by CodePal
+ 
